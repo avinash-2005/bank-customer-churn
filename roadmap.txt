@@ -1,0 +1,176 @@
+You are a senior full-stack developer, ML engineer, and UI/UX designer.
+
+Build a complete, production-ready COLLEGE MINOR PROJECT titled:
+
+“Behavior + Emotion Based Customer Churn Prediction System for Digital Banking”
+
+==============================
+TECH STACK (STRICT)
+==============================
+Backend / ML:
+- Python 3.10+
+- pandas, numpy
+- scikit-learn
+
+NLP:
+- VADER or TextBlob for sentiment analysis
+
+Frontend / UI:
+- Streamlit
+
+Styling:
+- Modern FinTech / Banking-grade UI
+- Clean, minimal, professional design
+
+==============================
+PROJECT OBJECTIVE
+==============================
+Predict customer churn in digital banking by combining:
+1) Behavioral analytics (usage patterns)
+2) Emotional analytics (customer sentiment from feedback)
+and present results through a professional Streamlit dashboard.
+
+==============================
+BASIC FILE STRUCTURE (MANDATORY)
+==============================
+
+project_root/
+│
+├── app.py                     # Main Streamlit application
+│
+├── data/
+│   ├── customer_behavior.csv  # Behavioral dataset
+│   └── customer_feedback.csv  # Feedback text dataset
+│
+├── models/
+│   ├── churn_model.pkl        # Trained churn prediction model
+│   └── scaler.pkl             # Feature scaler
+│
+├── src/
+│   ├── preprocessing.py       # Data cleaning & preprocessing
+│   ├── sentiment.py           # NLP sentiment analysis logic
+│   ├── model.py               # Model training & prediction
+│   └── utils.py               # Helper functions
+│
+├── assets/
+│   └── styles.css             # Optional custom styling
+│
+├── requirements.txt           # Project dependencies
+│
+└── README.md                  # How to run & project overview
+
+==============================
+FUNCTIONAL REQUIREMENTS
+==============================
+
+1. DATA INPUT
+- Load customer behavioral data from CSV:
+  - customer_id
+  - login_frequency
+  - session_duration
+  - inactivity_days
+  - transaction_count
+  - churn (target variable)
+
+- Load customer feedback data from CSV:
+  - customer_id
+  - feedback_text
+
+2. DATA PREPROCESSING
+- Handle missing values
+- Normalize numerical features
+- Clean text data:
+  - lowercase
+  - remove punctuation
+  - remove stopwords
+
+3. SENTIMENT ANALYSIS MODULE
+- Apply NLP on feedback_text
+- Generate:
+  - sentiment_label (Positive / Neutral / Negative)
+  - sentiment_score (numeric)
+- Map sentiment score to each customer
+- Store sentiment_score as a model feature
+
+4. FEATURE FUSION
+- Merge behavioral features with sentiment_score
+- Create final dataset for model training
+
+5. CHURN PREDICTION MODEL
+- Use Random Forest or Logistic Regression
+- Perform train-test split
+- Train model using behavioral + sentiment features
+- Save trained model and scaler
+- Output churn probability (0–100%)
+- Classify churn risk:
+  - Low Risk
+  - Medium Risk
+  - High Risk
+
+6. MODEL EVALUATION
+- Calculate and display:
+  - Accuracy
+  - Precision
+  - Recall
+  - F1-score
+
+==============================
+STREAMLIT DASHBOARD (CRITICAL)
+==============================
+
+UI/UX DESIGN REQUIREMENTS:
+- Professional FinTech dashboard
+- Minimal, clean, trustworthy
+- No flashy colors, no emojis
+- Banking-grade aesthetics
+
+COLOR PALETTE:
+- Primary: Deep Blue (#0B1C2D)
+- Secondary: Slate Gray (#5A6C7D)
+- Accent: Teal (#1FB6A6)
+- Background: Light Gray
+- Cards: White
+
+TYPOGRAPHY:
+- Clean fonts (Inter / Roboto style)
+- Clear hierarchy
+- Readable metrics
+
+LAYOUT:
+- Top header (Title + subtitle)
+- Left sidebar navigation:
+  - Dashboard
+  - Customer Analysis
+  - Model Metrics
+  - About Project
+- Main content area with sections
+
+DASHBOARD COMPONENTS:
+- KPI metric cards:
+  - Churn Probability (%)
+  - Risk Level
+  - Sentiment Label
+  - Sentiment Score
+- Risk visualization using progress bar or gauge-style bar
+- Simple bar charts
+- Customer selection dropdown
+- Rounded cards, soft shadows, consistent spacing
+
+==============================
+PROJECT QUALITY RULES
+==============================
+- Modular, readable, student-friendly code
+- Clear comments for viva explanation
+- No over-engineering
+- Demo-ready and examiner-friendly
+- Ready to run with: streamlit run app.py
+
+==============================
+DELIVERABLES
+==============================
+- Folder structure as defined above
+- Complete Python ML code
+- Sentiment analysis code
+- Streamlit dashboard UI
+- requirements.txt
+- README.md with setup instructions

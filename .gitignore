@@ -1,0 +1,36 @@
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python cache & compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Large Database files (exceeds GitHub's 100 MB limit)
+data/churn_database.db
+*.db
+*.sqlite3
+
+# Environment variables & secrets
+.env
+.env.*
+
+# IDE & Editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
